@@ -34,7 +34,7 @@ namespace Movie_Manager_Application
 
         private void aboutToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Console.WriteLine("You clicked the about button!");
+            Console.WriteLine("You clicked the about menu option!");
             var m = new About();
             m.Show();
 
@@ -42,21 +42,21 @@ namespace Movie_Manager_Application
 
         private void addMovieToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("You clicked the add movie button!");
+            Console.WriteLine("You clicked the add movie menu option!");
             var am = new AddMovie();
             am.Show();
         }
 
         private void deleteMovieToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("You clicked the delete movie button!");
+            Console.WriteLine("You clicked the delete movie menu option!");
             var um = new UpdateMovie();
             um.Show();
         }
 
         private void updateMovieToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("You clicked the update movie button!");
+            Console.WriteLine("You clicked the update movie menu option!");
             var dm = new DeleteMovie();
             dm.Show();
         }

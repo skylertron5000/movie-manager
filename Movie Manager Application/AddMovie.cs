@@ -17,18 +17,12 @@ namespace Movie_Manager_Application
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
             Close();
-
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void clearButton_Click(object sender, EventArgs e)
         {
             movieTitleTextBox.Clear();
             yearTextBox.Clear();
@@ -38,7 +32,7 @@ namespace Movie_Manager_Application
             boxOfficeEarningTextBox.Clear();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void addButton_Click(object sender, EventArgs e)
         {
 
         }

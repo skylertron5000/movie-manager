@@ -55,7 +55,6 @@ namespace Movie_Manager_Application
             this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Movie Title:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -153,16 +152,17 @@ namespace Movie_Manager_Application
             this.addButton.TabIndex = 12;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
-            // 
-            // clearButton
-            // 
-            this.clearButton.Location = new System.Drawing.Point(243, 394);
+            this.clearButton.Click += new System.EventHandler(this.addButton_Click);
+      // 
+      // clearButton
+      // 
+      this.clearButton.Location = new System.Drawing.Point(243, 394);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 23);
             this.clearButton.TabIndex = 13;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.button2_Click);
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // closeButton
             // 
@@ -172,7 +172,7 @@ namespace Movie_Manager_Application
             this.closeButton.TabIndex = 14;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.button3_Click);
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // addMovieScreenLabel
             // 
@@ -184,7 +184,6 @@ namespace Movie_Manager_Application
             this.addMovieScreenLabel.Size = new System.Drawing.Size(190, 25);
             this.addMovieScreenLabel.TabIndex = 15;
             this.addMovieScreenLabel.Text = "Add Movie Screen";
-            this.addMovieScreenLabel.Click += new System.EventHandler(this.label7_Click);
             // 
             // AddMovie
             // 
