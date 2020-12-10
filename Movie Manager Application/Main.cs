@@ -50,14 +50,14 @@ namespace Movie_Manager_Application
         private void deleteMovieToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Console.WriteLine("You clicked the delete movie menu option!");
-            var um = new UpdateMovie();
+            var um = new DeleteMovie();
             um.Show();
         }
 
         private void updateMovieToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Console.WriteLine("You clicked the update movie menu option!");
-            var dm = new DeleteMovie();
+            var dm = new UpdateMovie();
             dm.Show();
         }
 
