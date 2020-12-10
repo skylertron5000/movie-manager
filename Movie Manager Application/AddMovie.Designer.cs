@@ -152,7 +152,7 @@ namespace Movie_Manager_Application
             this.addButton.TabIndex = 12;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.addButton_Click);
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
       // 
       // clearButton
       // 

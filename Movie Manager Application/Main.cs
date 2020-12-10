@@ -22,11 +22,6 @@ namespace Movie_Manager_Application
         //onLoad connect to database and download list of movies
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
