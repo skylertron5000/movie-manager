@@ -27,7 +27,7 @@ namespace Movie_Manager_Application
             Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void deleteDeleteMovieButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Pushed the delete button");
         }

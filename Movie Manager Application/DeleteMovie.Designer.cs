@@ -75,7 +75,6 @@ namespace Movie_Manager_Application
             this.year.Size = new System.Drawing.Size(42, 17);
             this.year.TabIndex = 2;
             this.year.Text = "Year:";
-            this.year.Click += new System.EventHandler(this.label3_Click);
             // 
             // director
             // 
@@ -131,7 +130,7 @@ namespace Movie_Manager_Application
             this.deleteButton2.TabIndex = 9;
             this.deleteButton2.Text = "Delete";
             this.deleteButton2.UseVisualStyleBackColor = true;
-            this.deleteButton2.Click += new System.EventHandler(this.button1_Click);
+            this.deleteButton2.Click += new System.EventHandler(this.deleteDeleteMovieButton_Click);
             // 
             // clearButton2
             // 
