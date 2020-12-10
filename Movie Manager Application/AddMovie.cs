@@ -17,12 +17,12 @@ namespace Movie_Manager_Application
             InitializeComponent();
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void closeAddMovieButton_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void clearButton_Click(object sender, EventArgs e)
+        private void clearAddMovieButton_Click(object sender, EventArgs e)
         {
             movieTitleTextBox.Clear();
             yearTextBox.Clear();
@@ -32,9 +32,9 @@ namespace Movie_Manager_Application
             boxOfficeEarningTextBox.Clear();
         }
 
-        private void addButton_Click(object sender, EventArgs e)
+        private void addAddMovieButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello, World!\n Second line.");
+            MessageBox.Show("Pushed the add button");
         }
     }
 }

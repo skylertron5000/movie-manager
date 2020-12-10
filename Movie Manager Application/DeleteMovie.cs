@@ -22,17 +22,17 @@ namespace Movie_Manager_Application
 
         }
 
-        private void close2_Click(object sender, EventArgs e)
+        private void closeDeleteMovie_Click(object sender, EventArgs e)
         {
             Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Pushed the delete button");
         }
 
-        private void clearButton2_Click(object sender, EventArgs e)
+        private void clearDeleteMovieButton_Click(object sender, EventArgs e)
         {
             movieTitleTextBox2.Clear();
             yearTextBox2.Clear();

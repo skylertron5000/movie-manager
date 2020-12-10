@@ -152,7 +152,7 @@ namespace Movie_Manager_Application
             this.addButton.TabIndex = 12;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            this.addButton.Click += new System.EventHandler(this.addAddMovieButton_Click);
             // 
             // clearButton
             // 
@@ -162,7 +162,7 @@ namespace Movie_Manager_Application
             this.clearButton.TabIndex = 13;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            this.clearButton.Click += new System.EventHandler(this.clearAddMovieButton_Click);
             // 
             // closeButton
             // 
@@ -172,7 +172,7 @@ namespace Movie_Manager_Application
             this.closeButton.TabIndex = 14;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.Click += new System.EventHandler(this.closeAddMovieButton_Click);
             // 
             // addMovieScreenLabel
             // 

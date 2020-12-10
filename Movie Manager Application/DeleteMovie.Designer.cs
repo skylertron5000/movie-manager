@@ -141,7 +141,7 @@ namespace Movie_Manager_Application
             this.clearButton2.TabIndex = 10;
             this.clearButton2.Text = "Clear";
             this.clearButton2.UseVisualStyleBackColor = true;
-            this.clearButton2.Click += new System.EventHandler(this.clearButton2_Click);
+            this.clearButton2.Click += new System.EventHandler(this.clearDeleteMovieButton_Click);
             // 
             // closeButton2
             // 
@@ -151,7 +151,7 @@ namespace Movie_Manager_Application
             this.closeButton2.TabIndex = 11;
             this.closeButton2.Text = "Close";
             this.closeButton2.UseVisualStyleBackColor = true;
-            this.closeButton2.Click += new System.EventHandler(this.close2_Click);
+            this.closeButton2.Click += new System.EventHandler(this.closeDeleteMovie_Click);
             // 
             // label2
             // 

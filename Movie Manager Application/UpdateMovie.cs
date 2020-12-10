@@ -22,12 +22,12 @@ namespace Movie_Manager_Application
 
         }
 
-        private void closeButton3_Click(object sender, EventArgs e)
+        private void closeUpdateMovieButton_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void clearButton3_Click(object sender, EventArgs e)
+        private void clearUpdateMovieButton_Click(object sender, EventArgs e)
         {
             movieTitleTextBox3.Clear();
             yearTextBox3.Clear();
@@ -35,6 +35,11 @@ namespace Movie_Manager_Application
             genreComboBox3.ResetText();
             rottenTomatoScoreTextBox3.Clear();
             boxOfficeEarningTextBox3.Clear();
+        }
+
+        private void updateUpdateMovieButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Pushed the update button");
         }
     }
 }
