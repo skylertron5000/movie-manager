@@ -37,7 +37,7 @@ namespace Movie_Manager_Application
             movieTitleTextBox2.Clear();
             yearTextBox2.Clear();
             directorTextBox2.Clear();
-            genre.ResetText();
+            genreComboBox2.ResetText();
             rottenTomatoScoreTextBox2.Clear();
             boxOfficeEarningTextBox2.Clear();
         }
