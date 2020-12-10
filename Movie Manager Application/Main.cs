@@ -19,7 +19,7 @@ namespace Movie_Manager_Application
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        //onLoad connect to database and download list of movies
+            //onLoad connect to database and download list of movies
         }
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace Movie_Manager_Application
             dm.Show();
         }
 
-       
+
     }
 
 }

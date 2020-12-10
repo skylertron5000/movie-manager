@@ -34,7 +34,7 @@ namespace Movie_Manager_Application
 
         private void addButton_Click(object sender, EventArgs e)
         {
-      MessageBox.Show("Hello, World!\n Second line.");
-    }
+            MessageBox.Show("Hello, World!\n Second line.");
+        }
     }
 }

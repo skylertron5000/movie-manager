@@ -153,10 +153,10 @@ namespace Movie_Manager_Application
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
-      // 
-      // clearButton
-      // 
-      this.clearButton.Location = new System.Drawing.Point(243, 394);
+            // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(243, 394);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 23);
             this.clearButton.TabIndex = 13;

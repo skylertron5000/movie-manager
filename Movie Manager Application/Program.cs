@@ -15,9 +15,9 @@ namespace Movie_Manager_Application
         [STAThread]
         static void Main()
         {
-                  Application.EnableVisualStyles();
-                  Application.SetCompatibleTextRenderingDefault(false);
-                  Application.Run(new Form1());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
 
             try
             {
