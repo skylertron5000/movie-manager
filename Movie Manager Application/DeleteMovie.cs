@@ -41,5 +41,10 @@ namespace Movie_Manager_Application
             rottenTomatoScoreTextBox2.Clear();
             boxOfficeEarningTextBox2.Clear();
         }
+
+        private void findDeleteMovieButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Pushed the find delete movie button");
+        }
     }
 }
