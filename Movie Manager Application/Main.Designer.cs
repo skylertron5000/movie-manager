@@ -100,11 +100,11 @@ namespace Movie_Manager_Application
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click_1);
             // 
-            // label1
+            // label_updateMovieScreen
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 41);
-            this.label1.Name = "label1";
+            this.label1.Name = "label_updateMovieScreen";
             this.label1.Size = new System.Drawing.Size(125, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Movies Master List";

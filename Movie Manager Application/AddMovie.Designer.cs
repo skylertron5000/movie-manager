@@ -47,56 +47,56 @@ namespace Movie_Manager_Application
             this.addMovieScreenLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // label_updateMovieScreen
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(45, 59);
-            this.label1.Name = "label1";
+            this.label1.Name = "label_updateMovieScreen";
             this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Movie Title:";
             // 
-            // label2
+            // label_movie
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(48, 99);
-            this.label2.Name = "label2";
+            this.label2.Name = "label_movie";
             this.label2.Size = new System.Drawing.Size(38, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Year";
             // 
-            // label3
+            // label_year
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(48, 143);
-            this.label3.Name = "label3";
+            this.label3.Name = "label_year";
             this.label3.Size = new System.Drawing.Size(62, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Director:";
             // 
-            // label4
+            // label_director
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(48, 191);
-            this.label4.Name = "label4";
+            this.label4.Name = "label_director";
             this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Genre:";
             // 
-            // label5
+            // label_genre
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(50, 334);
-            this.label5.Name = "label5";
+            this.label5.Name = "label_genre";
             this.label5.Size = new System.Drawing.Size(147, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Rotten Tomato Score:";
             // 
-            // label6
+            // label_rtScore
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(470, 336);
-            this.label6.Name = "label6";
+            this.label6.Name = "label_rtScore";
             this.label6.Size = new System.Drawing.Size(129, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "Box Office Earning:";

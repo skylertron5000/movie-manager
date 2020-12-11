@@ -54,7 +54,7 @@ namespace Movie_Manager_Application
             this.label_deleteMovieScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_deleteMovieScreen.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label_deleteMovieScreen.Location = new System.Drawing.Point(72, 16);
-            this.label_deleteMovieScreen.Name = "label1";
+            this.label_deleteMovieScreen.Name = "label_updateMovieScreen";
             this.label_deleteMovieScreen.Size = new System.Drawing.Size(175, 20);
             this.label_deleteMovieScreen.TabIndex = 0;
             this.label_deleteMovieScreen.Text = "Delete Movie Screen";

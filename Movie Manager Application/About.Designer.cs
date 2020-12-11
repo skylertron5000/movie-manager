@@ -59,10 +59,10 @@ namespace Movie_Manager_Application
             this.textBox1.Text = resources.GetString("textBox1.Text");
             this.textBox1.ReadOnly = true;
             // 
-            // button1
+            // button_find
             // 
             this.button1.Location = new System.Drawing.Point(665, 387);
-            this.button1.Name = "button1";
+            this.button1.Name = "button_find";
             this.button1.Size = new System.Drawing.Size(97, 42);
             this.button1.TabIndex = 1;
             this.button1.Text = "Close";
