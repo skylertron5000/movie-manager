@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Movie_Manager_Application
@@ -24,12 +17,12 @@ namespace Movie_Manager_Application
 
         private void clearAddMovieButton_Click(object sender, EventArgs e)
         {
-            movieTitleTextBox.Clear();
-            yearTextBox.Clear();
-            directorTextBox.Clear();
-            genreComboBox.ResetText();
-            rottenTomatoScoreTextBox.Clear();
-            boxOfficeEarningTextBox.Clear();
+            textBox_movieTitle.Clear();
+            textBox_year.Clear();
+            textBox_director.Clear();
+            comboBox_genre.ResetText();
+            textBox_rtScore.Clear();
+            textBox_boe.Clear();
         }
 
         private void addAddMovieButton_Click(object sender, EventArgs e)
