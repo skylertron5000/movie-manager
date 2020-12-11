@@ -17,10 +17,11 @@ namespace Movie_Manager_Application
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void findUpdateMovieButton_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Pushed the find update movie button");
         }
+
 
         private void closeUpdateMovieButton_Click(object sender, EventArgs e)
         {
