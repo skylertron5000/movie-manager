@@ -29,230 +29,229 @@ namespace Movie_Manager_Application
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.movie = new System.Windows.Forms.Label();
-            this.year = new System.Windows.Forms.Label();
-            this.director = new System.Windows.Forms.Label();
-            this.genre = new System.Windows.Forms.Label();
-            this.movieTitleTextBox2 = new System.Windows.Forms.TextBox();
-            this.yearTextBox2 = new System.Windows.Forms.TextBox();
-            this.directorTextBox2 = new System.Windows.Forms.TextBox();
-            this.rottenTomatoScoreTextBox2 = new System.Windows.Forms.TextBox();
-            this.deleteButton2 = new System.Windows.Forms.Button();
-            this.clearButton2 = new System.Windows.Forms.Button();
-            this.closeButton2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.boxOfficeEarningTextBox2 = new System.Windows.Forms.TextBox();
-            this.genreComboBox2 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label_deleteMovieScreen = new System.Windows.Forms.Label();
+            this.label_movie = new System.Windows.Forms.Label();
+            this.label_year = new System.Windows.Forms.Label();
+            this.label_director = new System.Windows.Forms.Label();
+            this.label_genre = new System.Windows.Forms.Label();
+            this.textBox_movieTitle = new System.Windows.Forms.TextBox();
+            this.textBox_year = new System.Windows.Forms.TextBox();
+            this.textBox_director = new System.Windows.Forms.TextBox();
+            this.textBox_rtScore = new System.Windows.Forms.TextBox();
+            this.button_delete = new System.Windows.Forms.Button();
+            this.button_clear = new System.Windows.Forms.Button();
+            this.button_close = new System.Windows.Forms.Button();
+            this.label_rtScore = new System.Windows.Forms.Label();
+            this.label_boe = new System.Windows.Forms.Label();
+            this.textBox_boe = new System.Windows.Forms.TextBox();
+            this.comboBox_genre = new System.Windows.Forms.ComboBox();
+            this.button_find = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // label_deleteMovieScreen
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(72, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Delete Movie Screen";
+            this.label_deleteMovieScreen.AutoSize = true;
+            this.label_deleteMovieScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_deleteMovieScreen.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label_deleteMovieScreen.Location = new System.Drawing.Point(72, 16);
+            this.label_deleteMovieScreen.Name = "label1";
+            this.label_deleteMovieScreen.Size = new System.Drawing.Size(175, 20);
+            this.label_deleteMovieScreen.TabIndex = 0;
+            this.label_deleteMovieScreen.Text = "Delete Movie Screen";
             // 
-            // movie
+            // label_movie
             // 
-            this.movie.AutoSize = true;
-            this.movie.Location = new System.Drawing.Point(75, 86);
-            this.movie.Name = "movie";
-            this.movie.Size = new System.Drawing.Size(87, 20);
-            this.movie.TabIndex = 1;
-            this.movie.Text = "Movie Title:";
+            this.label_movie.AutoSize = true;
+            this.label_movie.Location = new System.Drawing.Point(75, 86);
+            this.label_movie.Name = "label_movie";
+            this.label_movie.Size = new System.Drawing.Size(87, 20);
+            this.label_movie.TabIndex = 1;
+            this.label_movie.Text = "Movie Title:";
             // 
-            // year
+            // label_year
             // 
-            this.year.AutoSize = true;
-            this.year.Location = new System.Drawing.Point(79, 144);
-            this.year.Name = "year";
-            this.year.Size = new System.Drawing.Size(47, 20);
-            this.year.TabIndex = 2;
-            this.year.Text = "Year:";
+            this.label_year.AutoSize = true;
+            this.label_year.Location = new System.Drawing.Point(79, 144);
+            this.label_year.Name = "label_year";
+            this.label_year.Size = new System.Drawing.Size(47, 20);
+            this.label_year.TabIndex = 2;
+            this.label_year.Text = "Year:";
             // 
-            // director
+            // label_director
             // 
-            this.director.AutoSize = true;
-            this.director.Location = new System.Drawing.Point(79, 221);
-            this.director.Name = "director";
-            this.director.Size = new System.Drawing.Size(69, 20);
-            this.director.TabIndex = 3;
-            this.director.Text = "Director:";
+            this.label_director.AutoSize = true;
+            this.label_director.Location = new System.Drawing.Point(79, 221);
+            this.label_director.Name = "label_director";
+            this.label_director.Size = new System.Drawing.Size(69, 20);
+            this.label_director.TabIndex = 3;
+            this.label_director.Text = "Director:";
             // 
-            // genre
+            // label_genre
             // 
-            this.genre.AutoSize = true;
-            this.genre.Location = new System.Drawing.Point(79, 301);
-            this.genre.Name = "genre";
-            this.genre.Size = new System.Drawing.Size(58, 20);
-            this.genre.TabIndex = 4;
-            this.genre.Text = "Genre:";
+            this.label_genre.AutoSize = true;
+            this.label_genre.Location = new System.Drawing.Point(79, 301);
+            this.label_genre.Name = "label_genre";
+            this.label_genre.Size = new System.Drawing.Size(58, 20);
+            this.label_genre.TabIndex = 4;
+            this.label_genre.Text = "Genre:";
             // 
-            // movieTitleTextBox2
+            // textBox_movieTitle
             // 
-            this.movieTitleTextBox2.Location = new System.Drawing.Point(219, 79);
-            this.movieTitleTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.movieTitleTextBox2.Name = "movieTitleTextBox2";
-            this.movieTitleTextBox2.Size = new System.Drawing.Size(112, 26);
-            this.movieTitleTextBox2.TabIndex = 5;
+            this.textBox_movieTitle.Location = new System.Drawing.Point(219, 79);
+            this.textBox_movieTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox_movieTitle.Name = "textBox_movieTitle";
+            this.textBox_movieTitle.Size = new System.Drawing.Size(112, 26);
+            this.textBox_movieTitle.TabIndex = 5;
             // 
             // yearTextBox2
             // 
-            this.yearTextBox2.Location = new System.Drawing.Point(219, 136);
-            this.yearTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.yearTextBox2.Name = "yearTextBox2";
-            this.yearTextBox2.Size = new System.Drawing.Size(112, 26);
-            this.yearTextBox2.TabIndex = 6;
+            this.textBox_year.Location = new System.Drawing.Point(219, 136);
+            this.textBox_year.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox_year.Name = "yearTextBox2";
+            this.textBox_year.Size = new System.Drawing.Size(112, 26);
+            this.textBox_year.TabIndex = 6;
             // 
-            // directorTextBox2
+            // textBox_director
             // 
-            this.directorTextBox2.Location = new System.Drawing.Point(219, 221);
-            this.directorTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.directorTextBox2.Name = "directorTextBox2";
-            this.directorTextBox2.Size = new System.Drawing.Size(112, 26);
-            this.directorTextBox2.TabIndex = 7;
+            this.textBox_director.Location = new System.Drawing.Point(219, 221);
+            this.textBox_director.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox_director.Name = "textBox_director";
+            this.textBox_director.Size = new System.Drawing.Size(112, 26);
+            this.textBox_director.TabIndex = 7;
             // 
-            // rottenTomatoScoreTextBox2
+            // textBox_rtScore
             // 
-            this.rottenTomatoScoreTextBox2.Location = new System.Drawing.Point(284, 436);
-            this.rottenTomatoScoreTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.rottenTomatoScoreTextBox2.Name = "rottenTomatoScoreTextBox2";
-            this.rottenTomatoScoreTextBox2.Size = new System.Drawing.Size(173, 26);
-            this.rottenTomatoScoreTextBox2.TabIndex = 8;
+            this.textBox_rtScore.Location = new System.Drawing.Point(284, 436);
+            this.textBox_rtScore.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox_rtScore.Name = "textBox_rtScore";
+            this.textBox_rtScore.Size = new System.Drawing.Size(173, 26);
+            this.textBox_rtScore.TabIndex = 8;
             // 
-            // deleteButton2
+            // button_delete
             // 
-            this.deleteButton2.Location = new System.Drawing.Point(75, 500);
-            this.deleteButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.deleteButton2.Name = "deleteButton2";
-            this.deleteButton2.Size = new System.Drawing.Size(84, 29);
-            this.deleteButton2.TabIndex = 9;
-            this.deleteButton2.Text = "Delete";
-            this.deleteButton2.UseVisualStyleBackColor = true;
-            this.deleteButton2.Click += new System.EventHandler(this.deleteDeleteMovieButton_Click);
+            this.button_delete.Location = new System.Drawing.Point(75, 500);
+            this.button_delete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(84, 29);
+            this.button_delete.TabIndex = 9;
+            this.button_delete.Text = "Delete";
+            this.button_delete.UseVisualStyleBackColor = true;
+            this.button_delete.Click += new System.EventHandler(this.deleteDeleteMovieButton_Click);
             // 
-            // clearButton2
+            // button_clear
             // 
-            this.clearButton2.Location = new System.Drawing.Point(248, 500);
-            this.clearButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.clearButton2.Name = "clearButton2";
-            this.clearButton2.Size = new System.Drawing.Size(84, 29);
-            this.clearButton2.TabIndex = 10;
-            this.clearButton2.Text = "Clear";
-            this.clearButton2.UseVisualStyleBackColor = true;
-            this.clearButton2.Click += new System.EventHandler(this.clearDeleteMovieButton_Click);
+            this.button_clear.Location = new System.Drawing.Point(248, 500);
+            this.button_clear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_clear.Name = "button_clear";
+            this.button_clear.Size = new System.Drawing.Size(84, 29);
+            this.button_clear.TabIndex = 10;
+            this.button_clear.Text = "Clear";
+            this.button_clear.UseVisualStyleBackColor = true;
+            this.button_clear.Click += new System.EventHandler(this.clearDeleteMovieButton_Click);
             // 
-            // closeButton2
+            // button_close
             // 
-            this.closeButton2.Location = new System.Drawing.Point(713, 500);
-            this.closeButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.closeButton2.Name = "closeButton2";
-            this.closeButton2.Size = new System.Drawing.Size(84, 29);
-            this.closeButton2.TabIndex = 11;
-            this.closeButton2.Text = "Close";
-            this.closeButton2.UseVisualStyleBackColor = true;
-            this.closeButton2.Click += new System.EventHandler(this.closeDeleteMovie_Click);
+            this.button_close.Location = new System.Drawing.Point(713, 500);
+            this.button_close.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button_close.Name = "button_close";
+            this.button_close.Size = new System.Drawing.Size(84, 29);
+            this.button_close.TabIndex = 11;
+            this.button_close.Text = "Close";
+            this.button_close.UseVisualStyleBackColor = true;
+            this.button_close.Click += new System.EventHandler(this.closeDeleteMovie_Click);
             // 
-            // label2
+            // label_rtScore
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 436);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 20);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Rotten Tomato Score:";
+            this.label_rtScore.AutoSize = true;
+            this.label_rtScore.Location = new System.Drawing.Point(72, 436);
+            this.label_rtScore.Name = "label_rtScore";
+            this.label_rtScore.Size = new System.Drawing.Size(166, 20);
+            this.label_rtScore.TabIndex = 12;
+            this.label_rtScore.Text = "Rotten Tomato Score:";
             // 
-            // label3
+            // label_boe
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(540, 442);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 20);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Box Office Earning:";
+            this.label_boe.AutoSize = true;
+            this.label_boe.Location = new System.Drawing.Point(540, 442);
+            this.label_boe.Name = "label_boe";
+            this.label_boe.Size = new System.Drawing.Size(145, 20);
+            this.label_boe.TabIndex = 13;
+            this.label_boe.Text = "Box Office Earning:";
             // 
-            // boxOfficeEarningTextBox2
+            // textBox_boe
             // 
-            this.boxOfficeEarningTextBox2.Location = new System.Drawing.Point(692, 442);
-            this.boxOfficeEarningTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.boxOfficeEarningTextBox2.Name = "boxOfficeEarningTextBox2";
-            this.boxOfficeEarningTextBox2.Size = new System.Drawing.Size(160, 26);
-            this.boxOfficeEarningTextBox2.TabIndex = 14;
+            this.textBox_boe.Location = new System.Drawing.Point(692, 442);
+            this.textBox_boe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox_boe.Name = "textBox_boe";
+            this.textBox_boe.Size = new System.Drawing.Size(160, 26);
+            this.textBox_boe.TabIndex = 14;
             // 
-            // genreComboBox2
+            // comboBox_genre
             // 
-            this.genreComboBox2.FormattingEnabled = true;
-            this.genreComboBox2.Location = new System.Drawing.Point(219, 292);
-            this.genreComboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.genreComboBox2.Name = "genreComboBox2";
-            this.genreComboBox2.Size = new System.Drawing.Size(130, 28);
-            this.genreComboBox2.TabIndex = 15;
+            this.comboBox_genre.FormattingEnabled = true;
+            this.comboBox_genre.Location = new System.Drawing.Point(219, 292);
+            this.comboBox_genre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox_genre.Name = "comboBox_genre";
+            this.comboBox_genre.Size = new System.Drawing.Size(130, 28);
+            this.comboBox_genre.TabIndex = 15;
             // 
-            // button2
+            // button_find
             // 
-            this.button2.Location = new System.Drawing.Point(382, 79);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 27);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Find";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.findDeleteMovieButton_Click);
+            this.button_find.Location = new System.Drawing.Point(382, 79);
+            this.button_find.Name = "button_find";
+            this.button_find.Size = new System.Drawing.Size(92, 27);
+            this.button_find.TabIndex = 17;
+            this.button_find.Text = "Find";
+            this.button_find.UseVisualStyleBackColor = true;
+            this.button_find.Click += new System.EventHandler(this.findDeleteMovieButton_Click);
             // 
             // DeleteMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 562);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.genreComboBox2);
-            this.Controls.Add(this.boxOfficeEarningTextBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.closeButton2);
-            this.Controls.Add(this.clearButton2);
-            this.Controls.Add(this.deleteButton2);
-            this.Controls.Add(this.rottenTomatoScoreTextBox2);
-            this.Controls.Add(this.directorTextBox2);
-            this.Controls.Add(this.yearTextBox2);
-            this.Controls.Add(this.movieTitleTextBox2);
-            this.Controls.Add(this.genre);
-            this.Controls.Add(this.director);
-            this.Controls.Add(this.year);
-            this.Controls.Add(this.movie);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button_find);
+            this.Controls.Add(this.comboBox_genre);
+            this.Controls.Add(this.textBox_boe);
+            this.Controls.Add(this.label_boe);
+            this.Controls.Add(this.label_rtScore);
+            this.Controls.Add(this.button_close);
+            this.Controls.Add(this.button_clear);
+            this.Controls.Add(this.button_delete);
+            this.Controls.Add(this.textBox_rtScore);
+            this.Controls.Add(this.textBox_director);
+            this.Controls.Add(this.textBox_year);
+            this.Controls.Add(this.textBox_movieTitle);
+            this.Controls.Add(this.label_genre);
+            this.Controls.Add(this.label_director);
+            this.Controls.Add(this.label_year);
+            this.Controls.Add(this.label_movie);
+            this.Controls.Add(this.label_deleteMovieScreen);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "DeleteMovie";
             this.Text = "DeleteMovie";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label movie;
-        private System.Windows.Forms.Label year;
-        private System.Windows.Forms.Label director;
-        private System.Windows.Forms.Label genre;
-        private System.Windows.Forms.TextBox movieTitleTextBox2;
-        private System.Windows.Forms.TextBox yearTextBox2;
-        private System.Windows.Forms.TextBox directorTextBox2;
-        private System.Windows.Forms.TextBox rottenTomatoScoreTextBox2;
-        private System.Windows.Forms.Button deleteButton2;
-        private System.Windows.Forms.Button clearButton2;
-        private System.Windows.Forms.Button closeButton2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox boxOfficeEarningTextBox2;
-        private System.Windows.Forms.ComboBox genreComboBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label_deleteMovieScreen;
+        private System.Windows.Forms.Label label_movie;
+        private System.Windows.Forms.Label label_year;
+        private System.Windows.Forms.Label label_director;
+        private System.Windows.Forms.Label label_genre;
+        private System.Windows.Forms.TextBox textBox_movieTitle;
+        private System.Windows.Forms.TextBox textBox_year;
+        private System.Windows.Forms.TextBox textBox_director;
+        private System.Windows.Forms.TextBox textBox_rtScore;
+        private System.Windows.Forms.Button button_delete;
+        private System.Windows.Forms.Button button_clear;
+        private System.Windows.Forms.Button button_close;
+        private System.Windows.Forms.Label label_rtScore;
+        private System.Windows.Forms.Label label_boe;
+        private System.Windows.Forms.TextBox textBox_boe;
+        private System.Windows.Forms.ComboBox comboBox_genre;
+        private System.Windows.Forms.Button button_find;
     }
 }
