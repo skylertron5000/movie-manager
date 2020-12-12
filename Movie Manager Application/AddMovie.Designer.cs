@@ -74,7 +74,7 @@ namespace Movie_Manager_Application
             this.label_year.Name = "label_year";
             this.label_year.Size = new System.Drawing.Size(38, 17);
             this.label_year.TabIndex = 1;
-            this.label_year.Text = "Year";
+            this.label_year.Text = "Year:";
             // 
             // label_director
             // 

@@ -29,7 +29,7 @@ namespace Movie_Manager_Application
         {
             string displayText =
                 "* Add Button *\n\n" +
-                $"Title: {textBox_movieTitle.Text}\n" +
+                $"Movie Title: {textBox_movieTitle.Text}\n" +
                 $"Year: {textBox_year.Text}\n" +
                 $"Director: {textBox_director.Text}\n" +
                 $"Genre: {comboBox_genre.Text}\n" +
