@@ -27,7 +27,16 @@ namespace Movie_Manager_Application
 
         private void addAddMovieButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Pushed the add button");
+            string displayText =
+                "* Add Button *\n\n" +
+                $"Title: {textBox_movieTitle.Text}\n" +
+                $"Year: {textBox_year.Text}\n" +
+                $"Director: {textBox_director.Text}\n" +
+                $"Genre: {comboBox_genre.Text}\n" +
+                $"RT Score: {textBox_rtScore.Text}\n" +
+                $"BOE: {textBox_boe.Text}";
+
+            MessageBox.Show(displayText);
         }
     }
 }

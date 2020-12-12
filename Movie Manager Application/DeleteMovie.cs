@@ -17,7 +17,16 @@ namespace Movie_Manager_Application
 
         private void deleteDeleteMovieButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Pushed the delete button");
+            string displayText =
+                "* Delete Button *\n\n" +
+                $"Title: {textBox_movieTitle.Text}\n" +
+                $"Year: {textBox_year.Text}\n" +
+                $"Director: {textBox_director.Text}\n" +
+                $"Genre: {comboBox_genre.Text}\n" +
+                $"RT Score: {textBox_rtScore.Text}\n" +
+                $"BOE: {textBox_boe.Text}";
+
+            MessageBox.Show(displayText);
         }
 
         private void clearDeleteMovieButton_Click(object sender, EventArgs e)
@@ -32,7 +41,11 @@ namespace Movie_Manager_Application
 
         private void findDeleteMovieButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Pushed the find delete movie button");
+            string displayText =
+                "* Find Button *\n\n" +
+                $"Title: {textBox_movieTitle.Text}\n";
+
+            MessageBox.Show(displayText);
         }
     }
 }
