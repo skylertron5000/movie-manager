@@ -17,12 +17,12 @@ namespace Movie_Manager_Application
             BOE = boe;
         }
 
-        public string MovieTitle { get; set; }
-        public string Year { get; set; }
-        public string Director { get; set; }
-        public string Genre { get; set; }
-        public string RTScore { get; set; }
-        public string BOE { get; set; }
+        public string MovieTitle { get; }
+        public string Year { get; }
+        public string Director { get; }
+        public string Genre { get; }
+        public string RTScore { get; }
+        public string BOE { get; }
 
         public void writePropertiesToConsole()
         {
