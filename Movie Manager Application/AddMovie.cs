@@ -10,11 +10,6 @@ namespace Movie_Manager_Application
             InitializeComponent();
         }
 
-        private void closeAddMovieButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void clearAddMovieButton_Click(object sender, EventArgs e)
         {
             textBox_movieTitle.Clear();
@@ -23,6 +18,11 @@ namespace Movie_Manager_Application
             comboBox_genre.ResetText();
             textBox_rtScore.Clear();
             textBox_boe.Clear();
+        }
+
+        private void closeAddMovieButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void addAddMovieButton_Click(object sender, EventArgs e)

@@ -10,20 +10,6 @@ namespace Movie_Manager_Application
             InitializeComponent();
         }
 
-        private void findUpdateMovieButton_Click(object sender, EventArgs e)
-        {
-            string displayText =
-                "* Find Button *\n\n" +
-                $"Title: {textBox_movieTitle.Text}\n";
-
-            MessageBox.Show(displayText);
-        }
-
-        private void closeUpdateMovieButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void clearUpdateMovieButton_Click(object sender, EventArgs e)
         {
             textBox_movieTitle.Clear();
@@ -32,6 +18,20 @@ namespace Movie_Manager_Application
             comboBox_genre.ResetText();
             textBox_rtScore.Clear();
             textBox_boe.Clear();
+        }
+
+        private void closeUpdateMovieButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void findUpdateMovieButton_Click(object sender, EventArgs e)
+        {
+            string displayText =
+                "* Find Button *\n\n" +
+                $"Title: {textBox_movieTitle.Text}\n";
+
+            MessageBox.Show(displayText);
         }
 
         private void updateUpdateMovieButton_Click(object sender, EventArgs e)
