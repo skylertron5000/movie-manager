@@ -39,7 +39,7 @@ namespace Movie_Manager_Application
             MessageBox.Show(displayText);
 
             // Make AddMovie call to DB
-            SqlHandler.foo();
+            SqlHandler.addMovie();
         }
     }
 }

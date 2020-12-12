@@ -34,7 +34,7 @@ namespace Movie_Manager_Application
             MessageBox.Show(displayText);
 
             // Make FindMovie call to DB
-            SqlHandler.foo();
+            SqlHandler.findMovie();
         }
 
         private void deleteDeleteMovieButton_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace Movie_Manager_Application
             MessageBox.Show(displayText);
 
             // Make DeleteMovie call to DB
-            SqlHandler.foo();
+            SqlHandler.deleteMovie();
         }
     }
 }
