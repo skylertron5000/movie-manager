@@ -47,6 +47,17 @@ namespace Movie_Manager_Application
             this.label_addMovieScreen = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // label_addMovieScreen
+            // 
+            this.label_addMovieScreen.AutoSize = true;
+            this.label_addMovieScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_addMovieScreen.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label_addMovieScreen.Location = new System.Drawing.Point(45, 13);
+            this.label_addMovieScreen.Name = "label_addMovieScreen";
+            this.label_addMovieScreen.Size = new System.Drawing.Size(190, 25);
+            this.label_addMovieScreen.TabIndex = 15;
+            this.label_addMovieScreen.Text = "Add Movie Screen";
+            // 
             // label_movieTitle
             // 
             this.label_movieTitle.AutoSize = true;
@@ -122,6 +133,14 @@ namespace Movie_Manager_Application
             this.textBox_director.Size = new System.Drawing.Size(200, 22);
             this.textBox_director.TabIndex = 8;
             // 
+            // comboBox_genre
+            // 
+            this.comboBox_genre.FormattingEnabled = true;
+            this.comboBox_genre.Location = new System.Drawing.Point(130, 180);
+            this.comboBox_genre.Name = "comboBox_genre";
+            this.comboBox_genre.Size = new System.Drawing.Size(200, 22);
+            this.comboBox_genre.TabIndex = 11;
+            // 
             // textBox_rtScore
             // 
             this.textBox_rtScore.Location = new System.Drawing.Point(200, 330);
@@ -135,14 +154,6 @@ namespace Movie_Manager_Application
             this.textBox_boe.Name = "textBox_boe";
             this.textBox_boe.Size = new System.Drawing.Size(200, 22);
             this.textBox_boe.TabIndex = 10;
-            // 
-            // comboBox_genre
-            // 
-            this.comboBox_genre.FormattingEnabled = true;
-            this.comboBox_genre.Location = new System.Drawing.Point(130, 180);
-            this.comboBox_genre.Name = "comboBox_genre";
-            this.comboBox_genre.Size = new System.Drawing.Size(200, 22);
-            this.comboBox_genre.TabIndex = 11;
             // 
             // button_add
             // 
@@ -173,17 +184,6 @@ namespace Movie_Manager_Application
             this.button_close.Text = "Close";
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.closeAddMovieButton_Click);
-            // 
-            // label_addMovieScreen
-            // 
-            this.label_addMovieScreen.AutoSize = true;
-            this.label_addMovieScreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_addMovieScreen.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label_addMovieScreen.Location = new System.Drawing.Point(45, 13);
-            this.label_addMovieScreen.Name = "label_addMovieScreen";
-            this.label_addMovieScreen.Size = new System.Drawing.Size(190, 25);
-            this.label_addMovieScreen.TabIndex = 15;
-            this.label_addMovieScreen.Text = "Add Movie Screen";
             // 
             // AddMovie
             // 
