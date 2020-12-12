@@ -9,53 +9,33 @@ namespace Movie_Manager_Application
 
         public static void findMovie()
         {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(ConnectionString))
-                {
-                    connection.Open(); // The database is closed upon Dispose() (or Close()).
-                }
-                Console.WriteLine("Find Movie - Successfully opened and closed the database.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Find Movie - Something went wrong while opening a connection to the database: { ex.Message }");
-            }
+            string queryType = "Find Movie";
+
+            queryDB(queryType);
         }
 
         public static void addMovie()
         {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(ConnectionString))
-                {
-                    connection.Open(); // The database is closed upon Dispose() (or Close()).
-                }
-                Console.WriteLine("Add Movie - Successfully opened and closed the database.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Add Movie - Something went wrong while opening a connection to the database: { ex.Message }");
-            }
+            string queryType = "Add Movie";
+
+            queryDB(queryType);
         }
 
         public static void updateMovie()
         {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(ConnectionString))
-                {
-                    connection.Open(); // The database is closed upon Dispose() (or Close()).
-                }
-                Console.WriteLine("Update Movie - Successfully opened and closed the database.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Update Movie - Something went wrong while opening a connection to the database: { ex.Message }");
-            }
+            string queryType = "Update Movie";
+
+            queryDB(queryType);
         }
 
         public static void deleteMovie()
+        {
+            string queryType = "Delete Movie";
+
+            queryDB(queryType);
+        }
+
+        private static void queryDB(string queryType)
         {
             try
             {
@@ -63,11 +43,11 @@ namespace Movie_Manager_Application
                 {
                     connection.Open(); // The database is closed upon Dispose() (or Close()).
                 }
-                Console.WriteLine("Delete Movie - Successfully opened and closed the database.");
+                Console.WriteLine($"{queryType} - Successfully opened and closed the database.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Delete Movie - Something went wrong while opening a connection to the database: { ex.Message }");
+                Console.WriteLine($"{queryType} - Something went wrong while opening a connection to the database: { ex.Message }");
             }
         }
     }
