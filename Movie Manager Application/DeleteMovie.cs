@@ -32,6 +32,9 @@ namespace Movie_Manager_Application
                 $"Title: {textBox_movieTitle.Text}\n";
 
             MessageBox.Show(displayText);
+
+            // Make FindMovie call to DB
+            SqlHandler.foo();
         }
 
         private void deleteDeleteMovieButton_Click(object sender, EventArgs e)
@@ -46,6 +49,9 @@ namespace Movie_Manager_Application
                 $"BOE: {textBox_boe.Text}";
 
             MessageBox.Show(displayText);
+
+            // Make DeleteMovie call to DB
+            SqlHandler.foo();
         }
     }
 }

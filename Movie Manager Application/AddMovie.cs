@@ -37,6 +37,9 @@ namespace Movie_Manager_Application
                 $"BOE: {textBox_boe.Text}";
 
             MessageBox.Show(displayText);
+
+            // Make AddMovie call to DB
+            SqlHandler.foo();
         }
     }
 }
