@@ -7,9 +7,12 @@ namespace Movie_Manager_Application
     {
         private const string ConnectionString = @"Data Source=coursemaster1.csbchotp6tva.us-east-2.rds.amazonaws.com,1433;Initial Catalog=CSCI1630;User ID=rw1630;Password=Project!;";
 
-        public static void findMovie()
+        public static void findMovie(MovieData movieData)
         {
             string queryType = "Find Movie";
+
+            Console.WriteLine("Attempting to Find Movie for the following data:");
+            Console.WriteLine(movieData.getAllProperties());
 
             queryDB(queryType);
         }
@@ -19,21 +22,27 @@ namespace Movie_Manager_Application
             string queryType = "Add Movie";
 
             Console.WriteLine("Attempting to Add Movie for the following data:");
-            movieData.writePropertiesToConsole();
+            Console.WriteLine(movieData.getAllProperties());
 
             queryDB(queryType);
         }
 
-        public static void updateMovie()
+        public static void updateMovie(MovieData movieData)
         {
             string queryType = "Update Movie";
 
+            Console.WriteLine("Attempting to Update Movie for the following data:");
+            Console.WriteLine(movieData.getAllProperties());
+
             queryDB(queryType);
         }
 
-        public static void deleteMovie()
+        public static void deleteMovie(MovieData movieData)
         {
             string queryType = "Delete Movie";
+
+            Console.WriteLine("Attempting to Delete Movie for the following data:");
+            Console.WriteLine(movieData.getAllProperties());
 
             queryDB(queryType);
         }

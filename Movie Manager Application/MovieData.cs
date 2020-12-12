@@ -24,14 +24,19 @@ namespace Movie_Manager_Application
         public string RTScore { get; }
         public string BOE { get; }
 
-        public void writePropertiesToConsole()
+        public string getAllProperties()
         {
+            string allProperties = "";
+
             foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(this))
             {
                 string name = descriptor.Name;
                 object value = descriptor.GetValue(this);
-                Console.WriteLine($"{name}={value}");
+                allProperties += $"<{name}={value}>";
+                //Console.WriteLine($"{name}={value}");
             }
+
+            return allProperties;
         }
     }
 }

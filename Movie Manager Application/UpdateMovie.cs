@@ -27,18 +27,31 @@ namespace Movie_Manager_Application
 
         private void findUpdateMovieButton_Click(object sender, EventArgs e)
         {
+            MovieData movieData = new MovieData(textBox_movieTitle.Text,
+                                    textBox_year.Text,
+                                    textBox_director.Text,
+                                    comboBox_genre.Text,
+                                    textBox_rtScore.Text,
+                                    textBox_boe.Text);
+
             string displayText =
                 "* Find Button *\n\n" +
-                $"Movie Title: {textBox_movieTitle.Text}\n";
+                $"Movie Title: {movieData.MovieTitle}\n";
 
             MessageBox.Show(displayText);
 
-            // Make FindMovie call to DB
-            SqlHandler.findMovie();
+            SqlHandler.findMovie(movieData);
         }
 
         private void updateUpdateMovieButton_Click(object sender, EventArgs e)
         {
+            MovieData movieData = new MovieData(textBox_movieTitle.Text,
+                        textBox_year.Text,
+                        textBox_director.Text,
+                        comboBox_genre.Text,
+                        textBox_rtScore.Text,
+                        textBox_boe.Text);
+
             string displayText =
                 "* Update Button *\n\n" +
                 $"Movie Title: {textBox_movieTitle.Text}\n" +
@@ -50,8 +63,7 @@ namespace Movie_Manager_Application
 
             MessageBox.Show(displayText);
 
-            // Make UpdateMovie call to DB
-            SqlHandler.updateMovie();
+            SqlHandler.updateMovie(movieData);
         }
     }
 }
