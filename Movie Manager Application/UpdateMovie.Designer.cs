@@ -42,7 +42,7 @@ namespace Movie_Manager_Application
             this.label_genre = new System.Windows.Forms.Label();
             this.label_rtScore = new System.Windows.Forms.Label();
             this.label_boe = new System.Windows.Forms.Label();
-            this.button_delete = new System.Windows.Forms.Button();
+            this.button_update = new System.Windows.Forms.Button();
             this.button_clear = new System.Windows.Forms.Button();
             this.button_close = new System.Windows.Forms.Button();
             this.button_find = new System.Windows.Forms.Button();
@@ -166,15 +166,15 @@ namespace Movie_Manager_Application
             this.button_find.UseVisualStyleBackColor = true;
             this.button_find.Click += new System.EventHandler(this.findUpdateMovieButton_Click);
             // 
-            // button_delete
+            // button_update
             // 
-            this.button_delete.Location = new System.Drawing.Point(130, 394);
-            this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(75, 23);
-            this.button_delete.TabIndex = 13;
-            this.button_delete.Text = "Update";
-            this.button_delete.UseVisualStyleBackColor = true;
-            this.button_delete.Click += new System.EventHandler(this.updateUpdateMovieButton_Click);
+            this.button_update.Location = new System.Drawing.Point(130, 394);
+            this.button_update.Name = "button_update";
+            this.button_update.Size = new System.Drawing.Size(75, 23);
+            this.button_update.TabIndex = 13;
+            this.button_update.Text = "Update";
+            this.button_update.UseVisualStyleBackColor = true;
+            this.button_update.Click += new System.EventHandler(this.updateUpdateMovieButton_Click);
             // 
             // button_clear
             // 
@@ -204,7 +204,7 @@ namespace Movie_Manager_Application
             this.Controls.Add(this.button_find);
             this.Controls.Add(this.button_close);
             this.Controls.Add(this.button_clear);
-            this.Controls.Add(this.button_delete);
+            this.Controls.Add(this.button_update);
             this.Controls.Add(this.label_boe);
             this.Controls.Add(this.label_rtScore);
             this.Controls.Add(this.label_genre);
@@ -239,7 +239,7 @@ namespace Movie_Manager_Application
         private System.Windows.Forms.Label label_genre;
         private System.Windows.Forms.Label label_rtScore;
         private System.Windows.Forms.Label label_boe;
-        private System.Windows.Forms.Button button_delete;
+        private System.Windows.Forms.Button button_update;
         private System.Windows.Forms.Button button_clear;
         private System.Windows.Forms.Button button_close;
         private System.Windows.Forms.Button button_find;
