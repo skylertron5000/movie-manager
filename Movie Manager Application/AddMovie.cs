@@ -27,19 +27,25 @@ namespace Movie_Manager_Application
 
         private void addAddMovieButton_Click(object sender, EventArgs e)
         {
+            MovieData movieData = new MovieData(textBox_movieTitle.Text,
+                                                textBox_year.Text,
+                                                textBox_director.Text,
+                                                comboBox_genre.Text,
+                                                textBox_rtScore.Text,
+                                                textBox_boe.Text);
+
+            SqlHandler.addMovie(movieData);
+
             string displayText =
                 "* Add Button *\n\n" +
-                $"Movie Title: {textBox_movieTitle.Text}\n" +
-                $"Year: {textBox_year.Text}\n" +
-                $"Director: {textBox_director.Text}\n" +
-                $"Genre: {comboBox_genre.Text}\n" +
-                $"RT Score: {textBox_rtScore.Text}\n" +
-                $"BOE: {textBox_boe.Text}";
+                $"Movie Title: {movieData.MovieTitle}\n" +
+                $"Year: {movieData.Year}\n" +
+                $"Director: {movieData.Director}\n" +
+                $"Genre: {movieData.Genre}\n" +
+                $"RT Score: {movieData.RTScore}\n" +
+                $"BOE: {movieData.BOE}";
 
             MessageBox.Show(displayText);
-
-            // Make AddMovie call to DB
-            SqlHandler.addMovie();
         }
     }
 }

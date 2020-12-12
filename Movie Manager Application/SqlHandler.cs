@@ -14,9 +14,12 @@ namespace Movie_Manager_Application
             queryDB(queryType);
         }
 
-        public static void addMovie()
+        public static void addMovie(MovieData movieData)
         {
             string queryType = "Add Movie";
+
+            Console.WriteLine("Attempting to Add Movie for the following data:");
+            movieData.writePropertiesToConsole();
 
             queryDB(queryType);
         }
@@ -37,6 +40,8 @@ namespace Movie_Manager_Application
 
         private static void queryDB(string queryType)
         {
+            Console.WriteLine($"Querying DB... QueryType: {queryType}");
+
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))

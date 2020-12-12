@@ -1,4 +1,8 @@
 ﻿
+using System;
+using System.ComponentModel;
+
+
 namespace Movie_Manager_Application
 {
     class MovieData
@@ -19,5 +23,15 @@ namespace Movie_Manager_Application
         public string Genre { get; set; }
         public string RTScore { get; set; }
         public string BOE { get; set; }
+
+        public void writePropertiesToConsole()
+        {
+            foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(this))
+            {
+                string name = descriptor.Name;
+                object value = descriptor.GetValue(this);
+                Console.WriteLine($"{name}={value}");
+            }
+        }
     }
 }
