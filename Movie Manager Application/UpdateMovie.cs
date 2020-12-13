@@ -27,7 +27,7 @@ namespace Movie_Manager_Application
 
         private void findUpdateMovieButton_Click(object sender, EventArgs e)
         {
-            MovieData movieData = new MovieData(textBox_movieTitle.Text,
+            MovieData movieData = new MovieData(-999, textBox_movieTitle.Text,
                                     textBox_year.Text,
                                     textBox_director.Text,
                                     comboBox_genre.Text,
@@ -45,7 +45,7 @@ namespace Movie_Manager_Application
 
         private void updateUpdateMovieButton_Click(object sender, EventArgs e)
         {
-            MovieData movieData = new MovieData(textBox_movieTitle.Text,
+            MovieData movieData = new MovieData(-999, textBox_movieTitle.Text,
                                                 textBox_year.Text,
                                                 textBox_director.Text,
                                                 comboBox_genre.Text,

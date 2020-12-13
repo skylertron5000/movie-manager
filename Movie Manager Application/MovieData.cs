@@ -4,8 +4,9 @@ namespace Movie_Manager_Application
 {
     class MovieData
     {
-        public MovieData(string movieTitle, string year, string director, string genre, string rtScore, string boe)
+        public MovieData(int id, string movieTitle, string year, string director, string genre, string rtScore, string boe)
         {
+            Id = id;
             MovieTitle = movieTitle;
             Year = year;
             Director = director;
@@ -14,6 +15,18 @@ namespace Movie_Manager_Application
             BOE = boe;
         }
 
+        public MovieData()
+        {
+            Id = -999;
+            MovieTitle = "";
+            Year = "";
+            Director = "";
+            Genre = "";
+            RTScore = "";
+            BOE = "";
+        }
+
+        public int Id { get; }
         public string MovieTitle { get; }
         public string Year { get; }
         public string Director { get; }
