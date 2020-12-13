@@ -11,45 +11,33 @@ namespace Movie_Manager_Application
         {
             string queryType = "Find Movie";
 
-            Console.WriteLine("Attempting to Find Movie for the following data:");
-            Console.WriteLine(movieData.getAllProperties());
-
-            queryDB(queryType);
+            queryDB(queryType, movieData);
         }
 
         public static void addMovie(MovieData movieData)
         {
             string queryType = "Add Movie";
 
-            Console.WriteLine("Attempting to Add Movie for the following data:");
-            Console.WriteLine(movieData.getAllProperties());
-
-            queryDB(queryType);
+            queryDB(queryType, movieData);
         }
 
         public static void updateMovie(MovieData movieData)
         {
             string queryType = "Update Movie";
 
-            Console.WriteLine("Attempting to Update Movie for the following data:");
-            Console.WriteLine(movieData.getAllProperties());
-
-            queryDB(queryType);
+            queryDB(queryType, movieData);
         }
 
         public static void deleteMovie(MovieData movieData)
         {
             string queryType = "Delete Movie";
 
-            Console.WriteLine("Attempting to Delete Movie for the following data:");
-            Console.WriteLine(movieData.getAllProperties());
-
-            queryDB(queryType);
+            queryDB(queryType, movieData);
         }
 
-        private static void queryDB(string queryType)
+        private static void queryDB(string queryType, MovieData movieData)
         {
-            Console.WriteLine($"Querying DB... QueryType: {queryType}");
+            consoleWriteQueryInfo(movieData, queryType);
 
             try
             {
@@ -63,6 +51,12 @@ namespace Movie_Manager_Application
             {
                 Console.WriteLine($"{queryType} - Something went wrong while opening a connection to the database: { ex.Message }");
             }
+        }
+
+        private static void consoleWriteQueryInfo(MovieData movieData, string queryType)
+        {
+            Console.WriteLine($"Attempting to {queryType} for the following data:");
+            Console.WriteLine(movieData.getAllProperties());
         }
     }
 }
