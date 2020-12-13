@@ -45,7 +45,6 @@ namespace Movie_Manager_Application
                 using (SqlCommand command = new SqlCommand("SELECT Id, FirstName, LastName, DateOfBirth, GenderId FROM dbo.Person", connection))
                 {
                     connection.Open(); // The database is closed upon Dispose() (or Close()).
-                    Console.WriteLine($"Command: {command}");
                 }
                 
                 Console.WriteLine($"Query all movie data - Successfully opened and closed the database.");

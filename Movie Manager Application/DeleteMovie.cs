@@ -27,12 +27,12 @@ namespace Movie_Manager_Application
 
         private void findButton_Click(object sender, EventArgs e)
         {
-            MovieData movieData = new MovieData(textBox_movieTitle.Text,
-                                                textBox_year.Text,
-                                                textBox_director.Text,
-                                                comboBox_genre.Text,
-                                                textBox_rtScore.Text,
-                                                textBox_boe.Text);
+            MovieData movieData = new MovieData(textBox_movieTitle.Text.Trim(),
+                                                textBox_year.Text.Trim(),
+                                                textBox_director.Text.Trim(),
+                                                comboBox_genre.Text.Trim(),
+                                                textBox_rtScore.Text.Trim(),
+                                                textBox_boe.Text.Trim());
 
             string displayText =
                 "* Find Button *\n\n" +
@@ -45,12 +45,12 @@ namespace Movie_Manager_Application
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            MovieData movieData = new MovieData(textBox_movieTitle.Text,
-                                                textBox_year.Text,
-                                                textBox_director.Text,
-                                                comboBox_genre.Text,
-                                                textBox_rtScore.Text,
-                                                textBox_boe.Text);
+            MovieData movieData = new MovieData(textBox_movieTitle.Text.Trim(),
+                                                textBox_year.Text.Trim(),
+                                                textBox_director.Text.Trim(),
+                                                comboBox_genre.Text.Trim(),
+                                                textBox_rtScore.Text.Trim(),
+                                                textBox_boe.Text.Trim());
 
             string displayText =
                 "* Delete Button *\n\n" +
