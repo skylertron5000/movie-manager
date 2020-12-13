@@ -35,6 +35,26 @@ namespace Movie_Manager_Application
             queryDB(queryType, movieData);
         }
 
+        public static string queryAllMovieData()
+        {
+            Console.WriteLine($"Attempting to load all movie data...");
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    connection.Open(); // The database is closed upon Dispose() (or Close()).
+                }
+                Console.WriteLine($"Query all movie data - Successfully opened and closed the database.");
+                return "((ALL OF THE MOVIE DATA))";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Query all movie data - Something went wrong while opening a connection to the database: { ex.Message }");
+                return null;
+            }
+        }
+
         private static void queryDB(string queryType, MovieData movieData)
         {
             consoleWriteQueryInfo(movieData, queryType);

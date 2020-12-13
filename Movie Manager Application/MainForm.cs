@@ -13,6 +13,8 @@ namespace Movie_Manager_Application
         private void MainForm_Load(object sender, EventArgs e)
         {
             // TODO: connect to database, download list of movies, populate table with movie data
+            string allMovieData = SqlHandler.queryAllMovieData();
+            Console.WriteLine($"All movie data: {allMovieData}");
         }
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
