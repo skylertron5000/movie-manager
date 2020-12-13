@@ -37,7 +37,9 @@ namespace Movie_Manager_Application
             this.deleteMovieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label_moviesMasterList = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.menuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -49,14 +51,15 @@ namespace Movie_Manager_Application
             this.aboutToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1015, 28);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(761, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.fileToolStripMenuItem.Text = "File ";
             this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
@@ -67,61 +70,74 @@ namespace Movie_Manager_Application
             this.updateMovieToolStripMenuItem,
             this.deleteMovieToolStripMenuItem});
             this.maintanceToolStripMenuItem.Name = "maintanceToolStripMenuItem";
-            this.maintanceToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.maintanceToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.maintanceToolStripMenuItem.Text = "Maintenance";
             // 
             // addMovieToolStripMenuItem
             // 
             this.addMovieToolStripMenuItem.Name = "addMovieToolStripMenuItem";
-            this.addMovieToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addMovieToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.addMovieToolStripMenuItem.Text = "Add Movie";
             this.addMovieToolStripMenuItem.Click += new System.EventHandler(this.addMovieToolStripMenuItem_Click);
             // 
             // updateMovieToolStripMenuItem
             // 
             this.updateMovieToolStripMenuItem.Name = "updateMovieToolStripMenuItem";
-            this.updateMovieToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.updateMovieToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.updateMovieToolStripMenuItem.Text = "Update Movie";
             this.updateMovieToolStripMenuItem.Click += new System.EventHandler(this.updateMovieToolStripMenuItem_Click);
             // 
             // deleteMovieToolStripMenuItem
             // 
             this.deleteMovieToolStripMenuItem.Name = "deleteMovieToolStripMenuItem";
-            this.deleteMovieToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.deleteMovieToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.deleteMovieToolStripMenuItem.Text = "Delete Movie";
             this.deleteMovieToolStripMenuItem.Click += new System.EventHandler(this.deleteMovieToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // label_moviesMasterList
             // 
             this.label_moviesMasterList.AutoSize = true;
-            this.label_moviesMasterList.Location = new System.Drawing.Point(12, 41);
+            this.label_moviesMasterList.Location = new System.Drawing.Point(9, 33);
+            this.label_moviesMasterList.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_moviesMasterList.Name = "label_moviesMasterList";
-            this.label_moviesMasterList.Size = new System.Drawing.Size(125, 17);
+            this.label_moviesMasterList.Size = new System.Drawing.Size(95, 13);
             this.label_moviesMasterList.TabIndex = 1;
             this.label_moviesMasterList.Text = "Movies Master List";
             // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(12, 49);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(737, 305);
+            this.dataGridView.TabIndex = 2;
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 450);
+            this.ClientSize = new System.Drawing.Size(761, 366);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label_moviesMasterList);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.Text = "Movie Manager Application";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -134,5 +150,6 @@ namespace Movie_Manager_Application
         private System.Windows.Forms.ToolStripMenuItem addMovieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateMovieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteMovieToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Data.SqlClient;
 
 namespace Movie_Manager_Application
@@ -35,28 +36,55 @@ namespace Movie_Manager_Application
             queryDB(queryType, movieData);
         }
 
-        public static string queryAllMovieData()
+        public static ArrayList queryAllMovieData()
         {
             Console.WriteLine($"Attempting to load all movie data...");
+
+            ArrayList allMovies = new ArrayList();
 
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
-                using (SqlCommand command = new SqlCommand("SELECT Id, FirstName, LastName, DateOfBirth, GenderId FROM dbo.Person", connection))
+                using (SqlCommand command = new SqlCommand("SELECT id, title, year, director, genre FROM MOVIES", connection))
+                //using (SqlCommand command = new SqlCommand("select * from information_schema.columns where table_name = 'MOVIES'", connection))
                 {
                     connection.Open(); // The database is closed upon Dispose() (or Close()).
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            object id = reader[0];
+                            int idAsInt = Convert.ToInt32(id);
+
+                            object title = reader[1];
+                            string titleAsString = title.ToString();
+
+                            object year = reader[2];
+                            string yearAsString = year.ToString();
+
+                            object director = reader[3];
+                            string directorAsString = director.ToString();
+
+                            object genre = reader[4];
+                            string genreAsString = genre.ToString();
+
+                            var m = new MovieData(idAsInt, titleAsString, yearAsString, directorAsString, genreAsString, "", "");
+
+                            allMovies.Add(m);
+                        }
+                    }
                 }
-                
-                Console.WriteLine($"Query all movie data - Successfully opened and closed the database.");
-                return "((ALL OF THE MOVIE DATA))";
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Query all movie data - Something went wrong while opening a connection to the database: { ex.Message }");
-                return null;
             }
-        }
 
+            Console.WriteLine($"Query all movie data - Successfully opened and closed the database.");
+
+            return allMovies;
+        }
         private static void queryDB(string queryType, MovieData movieData)
         {
             consoleWriteQueryInfo(movieData, queryType);

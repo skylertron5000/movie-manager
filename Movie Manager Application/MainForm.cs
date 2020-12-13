@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Windows.Forms;
 
 namespace Movie_Manager_Application
@@ -13,7 +14,8 @@ namespace Movie_Manager_Application
         private void MainForm_Load(object sender, EventArgs e)
         {
             // TODO: connect to database, download list of movies, populate table with movie data
-            string allMovieData = SqlHandler.queryAllMovieData();
+            ArrayList allMovieData = SqlHandler.queryAllMovieData();
+            dataGridView.DataSource = allMovieData;
             Console.WriteLine($"All movie data: {allMovieData}");
         }
 
