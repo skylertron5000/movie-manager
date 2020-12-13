@@ -139,21 +139,21 @@ namespace Movie_Manager_Application
             this.comboBox_genre.Location = new System.Drawing.Point(130, 180);
             this.comboBox_genre.Name = "comboBox_genre";
             this.comboBox_genre.Size = new System.Drawing.Size(200, 22);
-            this.comboBox_genre.TabIndex = 11;
+            this.comboBox_genre.TabIndex = 9;
             // 
             // textBox_rtScore
             // 
             this.textBox_rtScore.Location = new System.Drawing.Point(200, 330);
             this.textBox_rtScore.Name = "textBox_rtScore";
             this.textBox_rtScore.Size = new System.Drawing.Size(150, 22);
-            this.textBox_rtScore.TabIndex = 9;
+            this.textBox_rtScore.TabIndex = 10;
             // 
             // textBox_boe
             // 
             this.textBox_boe.Location = new System.Drawing.Point(560, 330);
             this.textBox_boe.Name = "textBox_boe";
             this.textBox_boe.Size = new System.Drawing.Size(200, 22);
-            this.textBox_boe.TabIndex = 10;
+            this.textBox_boe.TabIndex = 11;
             // 
             // button_add
             // 

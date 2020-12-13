@@ -56,7 +56,7 @@ namespace Movie_Manager_Application
             this.label_updateMovieScreen.Location = new System.Drawing.Point(45, 13);
             this.label_updateMovieScreen.Name = "label_updateMovieScreen";
             this.label_updateMovieScreen.Size = new System.Drawing.Size(190, 25);
-            this.label_updateMovieScreen.TabIndex = 6;
+            this.label_updateMovieScreen.TabIndex = 10;
             this.label_updateMovieScreen.Text = "Update Movie Screen";
             // 
             // label_movieTitle
@@ -65,7 +65,7 @@ namespace Movie_Manager_Application
             this.label_movieTitle.Location = new System.Drawing.Point(45, 60);
             this.label_movieTitle.Name = "label_movieTitle";
             this.label_movieTitle.Size = new System.Drawing.Size(80, 17);
-            this.label_movieTitle.TabIndex = 7;
+            this.label_movieTitle.TabIndex = 11;
             this.label_movieTitle.Text = "Movie Title:";
             // 
             // label_year
@@ -74,7 +74,7 @@ namespace Movie_Manager_Application
             this.label_year.Location = new System.Drawing.Point(45, 100);
             this.label_year.Name = "label_year";
             this.label_year.Size = new System.Drawing.Size(38, 17);
-            this.label_year.TabIndex = 8;
+            this.label_year.TabIndex = 12;
             this.label_year.Text = "Year:";
             // 
             // label_director
@@ -83,7 +83,7 @@ namespace Movie_Manager_Application
             this.label_director.Location = new System.Drawing.Point(45, 140);
             this.label_director.Name = "label_director";
             this.label_director.Size = new System.Drawing.Size(62, 17);
-            this.label_director.TabIndex = 9;
+            this.label_director.TabIndex = 13;
             this.label_director.Text = "Director:";
             // 
             // label_genre
@@ -92,7 +92,7 @@ namespace Movie_Manager_Application
             this.label_genre.Location = new System.Drawing.Point(45, 180);
             this.label_genre.Name = "label_genre";
             this.label_genre.Size = new System.Drawing.Size(52, 17);
-            this.label_genre.TabIndex = 10;
+            this.label_genre.TabIndex = 14;
             this.label_genre.Text = "Genre:";
             // 
             // label_rtScore
@@ -101,7 +101,7 @@ namespace Movie_Manager_Application
             this.label_rtScore.Location = new System.Drawing.Point(45, 330);
             this.label_rtScore.Name = "label_rtScore";
             this.label_rtScore.Size = new System.Drawing.Size(147, 17);
-            this.label_rtScore.TabIndex = 11;
+            this.label_rtScore.TabIndex = 15;
             this.label_rtScore.Text = "Rotten Tomato Score:";
             // 
             // label_boe
@@ -110,7 +110,7 @@ namespace Movie_Manager_Application
             this.label_boe.Location = new System.Drawing.Point(420, 330);
             this.label_boe.Name = "label_boe";
             this.label_boe.Size = new System.Drawing.Size(129, 17);
-            this.label_boe.TabIndex = 12;
+            this.label_boe.TabIndex = 16;
             this.label_boe.Text = "Box Office Earning:";
             // 
             // textBox_movieTitle
@@ -140,28 +140,28 @@ namespace Movie_Manager_Application
             this.comboBox_genre.Location = new System.Drawing.Point(130, 180);
             this.comboBox_genre.Name = "comboBox_genre";
             this.comboBox_genre.Size = new System.Drawing.Size(200, 22);
-            this.comboBox_genre.TabIndex = 5;
+            this.comboBox_genre.TabIndex = 3;
             // 
             // textBox_rtScore
             // 
             this.textBox_rtScore.Location = new System.Drawing.Point(200, 330);
             this.textBox_rtScore.Name = "textBox_rtScore";
             this.textBox_rtScore.Size = new System.Drawing.Size(150, 22);
-            this.textBox_rtScore.TabIndex = 3;
+            this.textBox_rtScore.TabIndex = 4;
             // 
             // textBox_boe
             // 
             this.textBox_boe.Location = new System.Drawing.Point(560, 330);
             this.textBox_boe.Name = "textBox_boe";
             this.textBox_boe.Size = new System.Drawing.Size(200, 22);
-            this.textBox_boe.TabIndex = 4;
+            this.textBox_boe.TabIndex = 5;
             // 
             // button_find
             // 
             this.button_find.Location = new System.Drawing.Point(360, 60);
             this.button_find.Name = "button_find";
             this.button_find.Size = new System.Drawing.Size(75, 23);
-            this.button_find.TabIndex = 16;
+            this.button_find.TabIndex = 9;
             this.button_find.Text = "Find";
             this.button_find.UseVisualStyleBackColor = true;
             this.button_find.Click += new System.EventHandler(this.findUpdateMovieButton_Click);
@@ -171,7 +171,7 @@ namespace Movie_Manager_Application
             this.button_update.Location = new System.Drawing.Point(130, 394);
             this.button_update.Name = "button_update";
             this.button_update.Size = new System.Drawing.Size(75, 23);
-            this.button_update.TabIndex = 13;
+            this.button_update.TabIndex = 6;
             this.button_update.Text = "Update";
             this.button_update.UseVisualStyleBackColor = true;
             this.button_update.Click += new System.EventHandler(this.updateUpdateMovieButton_Click);
@@ -181,7 +181,7 @@ namespace Movie_Manager_Application
             this.button_clear.Location = new System.Drawing.Point(243, 394);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(75, 23);
-            this.button_clear.TabIndex = 14;
+            this.button_clear.TabIndex = 7;
             this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = true;
             this.button_clear.Click += new System.EventHandler(this.clearUpdateMovieButton_Click);
@@ -191,7 +191,7 @@ namespace Movie_Manager_Application
             this.button_close.Location = new System.Drawing.Point(622, 394);
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(75, 23);
-            this.button_close.TabIndex = 15;
+            this.button_close.TabIndex = 8;
             this.button_close.Text = "Close";
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.closeUpdateMovieButton_Click);
