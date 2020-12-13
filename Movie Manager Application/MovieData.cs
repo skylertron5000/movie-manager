@@ -1,7 +1,4 @@
-﻿
-using System;
-using System.ComponentModel;
-
+﻿using System.ComponentModel;
 
 namespace Movie_Manager_Application
 {
@@ -33,7 +30,6 @@ namespace Movie_Manager_Application
                 string name = descriptor.Name;
                 object value = descriptor.GetValue(this);
                 allProperties += $"<{name}={value}>";
-                //Console.WriteLine($"{name}={value}");
             }
 
             return allProperties;
