@@ -165,7 +165,7 @@ namespace Movie_Manager_Application
             this.button_find.TabIndex = 16;
             this.button_find.Text = "Find";
             this.button_find.UseVisualStyleBackColor = true;
-            this.button_find.Click += new System.EventHandler(this.findDeleteMovieButton_Click);
+            this.button_find.Click += new System.EventHandler(this.findButton_Click);
             // 
             // button_delete
             // 
@@ -175,7 +175,7 @@ namespace Movie_Manager_Application
             this.button_delete.TabIndex = 13;
             this.button_delete.Text = "Delete";
             this.button_delete.UseVisualStyleBackColor = true;
-            this.button_delete.Click += new System.EventHandler(this.deleteDeleteMovieButton_Click);
+            this.button_delete.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // button_clear
             // 
@@ -185,7 +185,7 @@ namespace Movie_Manager_Application
             this.button_clear.TabIndex = 14;
             this.button_clear.Text = "Clear";
             this.button_clear.UseVisualStyleBackColor = true;
-            this.button_clear.Click += new System.EventHandler(this.clearDeleteMovieButton_Click);
+            this.button_clear.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // button_close
             // 
@@ -195,7 +195,7 @@ namespace Movie_Manager_Application
             this.button_close.TabIndex = 15;
             this.button_close.Text = "Close";
             this.button_close.UseVisualStyleBackColor = true;
-            this.button_close.Click += new System.EventHandler(this.closeDeleteMovie_Click);
+            this.button_close.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // DeleteMovie
             // 

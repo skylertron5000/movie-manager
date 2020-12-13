@@ -17,7 +17,7 @@ namespace Movie_Manager_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MainForm());
+            Application.Run(new MainForm());
 
             Console.WriteLine($"Attempting to load all movie data...");
 

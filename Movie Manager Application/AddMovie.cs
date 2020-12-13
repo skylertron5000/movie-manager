@@ -10,7 +10,7 @@ namespace Movie_Manager_Application
             InitializeComponent();
         }
 
-        private void clearAddMovieButton_Click(object sender, EventArgs e)
+        private void clearButton_Click(object sender, EventArgs e)
         {
             textBox_movieTitle.Clear();
             textBox_year.Clear();
@@ -20,12 +20,12 @@ namespace Movie_Manager_Application
             textBox_boe.Clear();
         }
 
-        private void closeAddMovieButton_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void addAddMovieButton_Click(object sender, EventArgs e)
+        private void addButton_Click(object sender, EventArgs e)
         {
             MovieData movieData = new MovieData(textBox_movieTitle.Text,
                                                 textBox_year.Text,
