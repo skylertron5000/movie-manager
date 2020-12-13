@@ -15,15 +15,14 @@ namespace Movie_Manager_Application
             BOE = boe;
         }
 
-        public MovieData()
+        public MovieData(string movieTitle, string year, string director, string genre, string rtScore, string boe)
         {
-            Id = -999;
-            MovieTitle = "";
-            Year = "";
-            Director = "";
-            Genre = "";
-            RTScore = "";
-            BOE = "";
+            MovieTitle = movieTitle;
+            Year = year;
+            Director = director;
+            Genre = genre;
+            RTScore = rtScore;
+            BOE = boe;
         }
 
         public int Id { get; }
