@@ -34,8 +34,6 @@ namespace Movie_Manager_Application
                                                 textBox_rtScore.Text,
                                                 textBox_boe.Text);
 
-            SqlHandler.addMovie(movieData);
-
             string displayText =
                 "* Add Button *\n\n" +
                 $"Movie Title: {movieData.MovieTitle}\n" +
@@ -46,6 +44,8 @@ namespace Movie_Manager_Application
                 $"BOE: {movieData.BOE}";
 
             MessageBox.Show(displayText);
+
+            SqlHandler.addMovie(movieData);
         }
     }
 }
