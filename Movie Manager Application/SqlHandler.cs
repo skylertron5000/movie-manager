@@ -92,10 +92,43 @@ namespace Movie_Manager_Application
             return 0;
         }
 
-        public static void updateRecord(MovieData movieData)
+        public static int updateRecord(int id, MovieData movieData)
         {
             string queryType = "Update Movie";
             consoleWriteQueryInfo(movieData, queryType);
+
+            string sqlCommandString =
+                "UPDATE MOVIES SET " +
+                "title = @title, " +
+                "year = @year, " +
+                "director = @director, " +
+                "genre = @genre " +
+                "WHERE Id = @Id";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                using (SqlCommand command = new SqlCommand(sqlCommandString, connection))
+                {
+                    connection.Open(); // The database is closed upon Dispose() (or Close()).
+
+                    command.Parameters.Add("Id", SqlDbType.Int).Value = id;
+                    command.Parameters.Add("title", SqlDbType.VarChar).Value = movieData.MovieTitle;
+                    command.Parameters.Add("year", SqlDbType.Int).Value = movieData.Year;
+                    command.Parameters.Add("director", SqlDbType.VarChar).Value = movieData.Director;
+                    command.Parameters.Add("genre", SqlDbType.Int).Value = movieData.Genre;
+
+                    Console.WriteLine($"{queryType} - Successfully opened and closed the database.");
+
+                    return command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{queryType} - Something went wrong while opening a connection to the database: { ex.Message }");
+            }
+
+            return 0;
         }
 
         public static void deleteRecord(MovieData movieData)

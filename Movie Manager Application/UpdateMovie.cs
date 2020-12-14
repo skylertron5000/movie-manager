@@ -5,6 +5,8 @@ namespace Movie_Manager_Application
 {
     public partial class UpdateMovie : Form
     {
+        private int foundId = -999; // Presumably no actual id will be -999
+
         public UpdateMovie()
         {
             InitializeComponent();
@@ -49,7 +51,10 @@ namespace Movie_Manager_Application
             }
             else
             {
-                // TODO: populate text fields
+                // Keep track of the found movie's id in case we want to update it
+                foundId = foundMovie.Id;
+
+                // Populate text fields
                 textBox_movieTitle.Text = foundMovie.MovieTitle;
                 textBox_year.Text = foundMovie.Year;
                 textBox_director.Text = foundMovie.Director;
@@ -61,25 +66,33 @@ namespace Movie_Manager_Application
 
         private void updateButton_Click(object sender, EventArgs e)
         {
-            MovieData movieData = new MovieData(textBox_movieTitle.Text.Trim(),
-                                                textBox_year.Text.Trim(),
-                                                textBox_director.Text.Trim(),
-                                                comboBox_genre.Text.Trim(),
-                                                textBox_rtScore.Text.Trim(),
-                                                textBox_boe.Text.Trim());
+            if (foundId == -999)
+            {
+                MessageBox.Show("You have not located a movie to update.");
+            }
+            else
+            {
+                MovieData movieData = new MovieData(textBox_movieTitle.Text.Trim(),
+                                                    textBox_year.Text.Trim(),
+                                                    textBox_director.Text.Trim(),
+                                                    comboBox_genre.Text.Trim(),
+                                                    textBox_rtScore.Text.Trim(),
+                                                    textBox_boe.Text.Trim());
 
-            string displayText =
-                "* Update Button *\n\n" +
-                $"Movie Title: {movieData.MovieTitle}\n" +
-                $"Year: {movieData.Year}\n" +
-                $"Director: {movieData.Director}\n" +
-                $"Genre: {movieData.Genre}\n" +
-                $"RT Score: {movieData.RTScore}\n" +
-                $"BOE: {movieData.BOE}";
+                string displayText =
+                    "* Update Button *\n\n" +
+                    $"Movie Title: {movieData.MovieTitle}\n" +
+                    $"Year: {movieData.Year}\n" +
+                    $"Director: {movieData.Director}\n" +
+                    $"Genre: {movieData.Genre}\n" +
+                    $"RT Score: {movieData.RTScore}\n" +
+                    $"BOE: {movieData.BOE}";
 
-            MessageBox.Show(displayText);
+                MessageBox.Show(displayText);
 
-            SqlHandler.updateRecord(movieData);
+                SqlHandler.updateRecord(foundId, movieData);
+            }
+
         }
     }
 }
