@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Movie_Manager_Application
@@ -46,7 +47,6 @@ namespace Movie_Manager_Application
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 using (SqlCommand command = new SqlCommand("SELECT id, title, year, director, genre FROM MOVIES", connection))
-                //using (SqlCommand command = new SqlCommand("select * from information_schema.columns where table_name = 'MOVIES'", connection))
                 {
                     connection.Open(); // The database is closed upon Dispose() (or Close()).
 
@@ -85,22 +85,42 @@ namespace Movie_Manager_Application
 
             return allMovies;
         }
-        private static void queryDB(string queryType, MovieData movieData)
+        private static int queryDB(string queryType, MovieData movieData)
         {
             consoleWriteQueryInfo(movieData, queryType);
+
+            string sqlCommandString =
+                "INSERT INTO MOVIES (title, year, director, genre) " + 
+                $"VALUES (@title, @year, @director, @genre);";
 
             try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
+                using (SqlCommand command = new SqlCommand(sqlCommandString, connection))
                 {
                     connection.Open(); // The database is closed upon Dispose() (or Close()).
+
+                    command.Parameters.Add("title", SqlDbType.VarChar).Value = movieData.MovieTitle;
+                    command.Parameters.Add("year", SqlDbType.Int).Value = movieData.Year;
+                    command.Parameters.Add("director", SqlDbType.VarChar).Value = movieData.Director;
+                    command.Parameters.Add("genre", SqlDbType.Int).Value = movieData.Genre;
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+
+
+                        Console.WriteLine($"{queryType} - Successfully opened and closed the database.");
+
+
+                    }
                 }
-                Console.WriteLine($"{queryType} - Successfully opened and closed the database.");
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"{queryType} - Something went wrong while opening a connection to the database: { ex.Message }");
             }
+
+            return 0;
         }
 
         private static void consoleWriteQueryInfo(MovieData movieData, string queryType)
