@@ -109,10 +109,63 @@ namespace Movie_Manager_Application
             string queryType = "Find Movie";
             consoleWriteQueryInfo(movieData, queryType);
 
+            string sqlCommandString = "SELECT id, title, year, director, genre, RottenTomatoesScore, TotalEarned FROM MOVIES " +
+                                      $"WHERE title = @title";
+
             // try/catch block to find the movie
             // if no movie is found, return null
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                using (SqlCommand command = new SqlCommand(sqlCommandString, connection))
+                {
+                    connection.Open(); // The database is closed upon Dispose() (or Close()).
 
-            //return new MovieData("FoundTitle", "FoundYear", "FoundDirector", "FoundGenre", "FoundRTScore", "FoundBOE");
+                    command.Parameters.Add("title", SqlDbType.VarChar).Value = movieData.MovieTitle;
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            object id = reader[0];
+                            int idAsInt = Convert.ToInt32(id);
+
+                            object title = reader[1];
+                            string titleAsString = title.ToString();
+
+                            object year = reader[2];
+                            string yearAsString = year.ToString();
+
+                            object director = reader[3];
+                            string directorAsString = director.ToString();
+
+                            object genre = reader[4];
+                            string genreAsString = genre.ToString();
+
+                            object rtScore = reader[5];
+                            string rtScoreAsInt = rtScore.ToString();
+
+                            object boe = reader[6];
+                            string boeAsDecimal = boe.ToString();
+
+                            var m = new MovieData(idAsInt,
+                                titleAsString,
+                                yearAsString,
+                                directorAsString,
+                                genreAsString,
+                                rtScoreAsInt,
+                                boeAsDecimal);
+
+                            return m;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Query all movie data - Something went wrong while opening a connection to the database: { ex.Message }");
+            }
+
             return null;
         }
 
