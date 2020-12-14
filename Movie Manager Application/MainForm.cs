@@ -13,15 +13,12 @@ namespace Movie_Manager_Application
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: connect to database, download list of movies, populate table with movie data
-            ArrayList allMovieData = SqlHandler.queryAllMovieData();
-            dataGridView.DataSource = allMovieData;
-            Console.WriteLine($"All movie data: {allMovieData}");
+            RefreshMovieData();
         }
 
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // The file menu option has no required functionality
+            RefreshMovieData();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,6 +43,12 @@ namespace Movie_Manager_Application
         {
             var form = new UpdateMovie();
             form.Show();
+        }
+
+        private void RefreshMovieData()
+        {
+            ArrayList allMovieData = SqlHandler.queryAllMovieData();
+            dataGridView.DataSource = allMovieData;
         }
     }
 }
