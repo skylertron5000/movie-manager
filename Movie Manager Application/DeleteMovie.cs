@@ -40,7 +40,7 @@ namespace Movie_Manager_Application
 
             MessageBox.Show(displayText);
 
-            SqlHandler.findMovie(movieData);
+            SqlHandler.findRecord(movieData);
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace Movie_Manager_Application
 
             MessageBox.Show(displayText);
 
-            SqlHandler.deleteMovie(movieData);
+            SqlHandler.deleteRecord(movieData);
         }
     }
 }

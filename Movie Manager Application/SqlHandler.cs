@@ -9,34 +9,6 @@ namespace Movie_Manager_Application
     {
         private const string ConnectionString = @"Data Source=coursemaster1.csbchotp6tva.us-east-2.rds.amazonaws.com,1433;Initial Catalog=CSCI1630;User ID=rw1630;Password=Project!;";
 
-        public static void findMovie(MovieData movieData)
-        {
-            string queryType = "Find Movie";
-
-            queryDB(queryType, movieData);
-        }
-
-        public static void addMovie(MovieData movieData)
-        {
-            string queryType = "Add Movie";
-
-            queryDB(queryType, movieData);
-        }
-
-        public static void updateMovie(MovieData movieData)
-        {
-            string queryType = "Update Movie";
-
-            queryDB(queryType, movieData);
-        }
-
-        public static void deleteMovie(MovieData movieData)
-        {
-            string queryType = "Delete Movie";
-
-            queryDB(queryType, movieData);
-        }
-
         public static ArrayList queryAllMovieData()
         {
             Console.WriteLine($"Attempting to load all movie data...");
@@ -85,8 +57,11 @@ namespace Movie_Manager_Application
 
             return allMovies;
         }
-        private static int queryDB(string queryType, MovieData movieData)
+
+        public static int insertRecord(MovieData movieData)
         {
+            string queryType = "Add Movie";
+
             consoleWriteQueryInfo(movieData, queryType);
 
             string sqlCommandString =
@@ -105,14 +80,9 @@ namespace Movie_Manager_Application
                     command.Parameters.Add("director", SqlDbType.VarChar).Value = movieData.Director;
                     command.Parameters.Add("genre", SqlDbType.Int).Value = movieData.Genre;
 
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
+                    Console.WriteLine($"{queryType} - Successfully opened and closed the database.");
 
-
-                        Console.WriteLine($"{queryType} - Successfully opened and closed the database.");
-
-
-                    }
+                    return command.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
@@ -121,6 +91,27 @@ namespace Movie_Manager_Application
             }
 
             return 0;
+        }
+
+        public static void updateRecord(MovieData movieData)
+        {
+            string queryType = "Update Movie";
+
+            consoleWriteQueryInfo(movieData, queryType);
+        }
+
+        public static void deleteRecord(MovieData movieData)
+        {
+            string queryType = "Delete Movie";
+
+            consoleWriteQueryInfo(movieData, queryType);
+        }
+
+        public static void findRecord(MovieData movieData)
+        {
+            string queryType = "Find Movie";
+
+            consoleWriteQueryInfo(movieData, queryType);
         }
 
         private static void consoleWriteQueryInfo(MovieData movieData, string queryType)

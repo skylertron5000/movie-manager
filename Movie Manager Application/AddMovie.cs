@@ -56,7 +56,7 @@ namespace Movie_Manager_Application
 
                 MessageBox.Show(displayText);
 
-                SqlHandler.addMovie(movieData);
+                SqlHandler.insertRecord(movieData);
             }
         }
     }
