@@ -40,7 +40,23 @@ namespace Movie_Manager_Application
 
             MessageBox.Show(displayText);
 
-            SqlHandler.findRecord(movieData);
+            // findRecord should return a single MovieData object and then populate the text fields with its data
+            MovieData foundMovie = SqlHandler.findRecord(movieData);
+
+            if (foundMovie is null)
+            {
+                MessageBox.Show($"No movie was found with title \"{movieData.MovieTitle}\"");
+            }
+            else
+            {
+                // TODO: populate text fields
+                textBox_movieTitle.Text = foundMovie.MovieTitle;
+                textBox_year.Text = foundMovie.Year;
+                textBox_director.Text = foundMovie.Director;
+                comboBox_genre.Text = foundMovie.Genre;
+                textBox_rtScore.Text = foundMovie.RTScore;
+                textBox_boe.Text = foundMovie.BOE;
+            }
         }
 
         private void updateButton_Click(object sender, EventArgs e)

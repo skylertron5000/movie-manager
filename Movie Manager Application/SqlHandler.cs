@@ -61,7 +61,6 @@ namespace Movie_Manager_Application
         public static int insertRecord(MovieData movieData)
         {
             string queryType = "Add Movie";
-
             consoleWriteQueryInfo(movieData, queryType);
 
             string sqlCommandString =
@@ -96,22 +95,25 @@ namespace Movie_Manager_Application
         public static void updateRecord(MovieData movieData)
         {
             string queryType = "Update Movie";
-
             consoleWriteQueryInfo(movieData, queryType);
         }
 
         public static void deleteRecord(MovieData movieData)
         {
             string queryType = "Delete Movie";
-
             consoleWriteQueryInfo(movieData, queryType);
         }
 
-        public static void findRecord(MovieData movieData)
+        public static MovieData findRecord(MovieData movieData)
         {
             string queryType = "Find Movie";
-
             consoleWriteQueryInfo(movieData, queryType);
+
+            // try/catch block to find the movie
+            // if no movie is found, return null
+
+            //return new MovieData("FoundTitle", "FoundYear", "FoundDirector", "FoundGenre", "FoundRTScore", "FoundBOE");
+            return null;
         }
 
         private static void consoleWriteQueryInfo(MovieData movieData, string queryType)
