@@ -131,10 +131,36 @@ namespace Movie_Manager_Application
             return 0;
         }
 
-        public static void deleteRecord(MovieData movieData)
+        public static int deleteRecord(MovieData movieData)
         {
             string queryType = "Delete Movie";
             consoleWriteQueryInfo(movieData, queryType);
+
+            // try/catch block to delete a movie
+            string sqlCommandString =
+                "DELETE FROM MOVIES " +
+                "WHERE Id = @Id";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                using (SqlCommand command = new SqlCommand(sqlCommandString, connection))
+                {
+                    connection.Open(); // The database is closed upon Dispose() (or Close()).
+
+                    command.Parameters.Add("Id", SqlDbType.Int).Value = movieData.Id;
+
+                    Console.WriteLine($"{queryType} - Successfully opened and closed the database.");
+
+                    return command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{queryType} - Something went wrong while opening a connection to the database: { ex.Message }");
+            }
+
+            return 0;
         }
 
         public static MovieData findRecord(MovieData movieData)

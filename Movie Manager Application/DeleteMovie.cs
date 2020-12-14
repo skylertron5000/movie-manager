@@ -5,6 +5,8 @@ namespace Movie_Manager_Application
 {
     public partial class DeleteMovie : Form
     {
+        private MovieData foundMovie;
+
         public DeleteMovie()
         {
             InitializeComponent();
@@ -41,7 +43,7 @@ namespace Movie_Manager_Application
             MessageBox.Show(displayText);
 
             // findRecord should return a single MovieData object and then populate the text fields with its data
-            MovieData foundMovie = SqlHandler.findRecord(movieData);
+            foundMovie = SqlHandler.findRecord(movieData);
 
             if (foundMovie is null)
             {
@@ -49,7 +51,10 @@ namespace Movie_Manager_Application
             }
             else
             {
-                // TODO: populate text fields
+                // Keep track of the found movie's id in case we want to update it
+                //foundId = foundMovie.Id;
+
+                // Populate text fields
                 textBox_movieTitle.Text = foundMovie.MovieTitle;
                 textBox_year.Text = foundMovie.Year;
                 textBox_director.Text = foundMovie.Director;
@@ -61,25 +66,25 @@ namespace Movie_Manager_Application
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            MovieData movieData = new MovieData(textBox_movieTitle.Text.Trim(),
-                                                textBox_year.Text.Trim(),
-                                                textBox_director.Text.Trim(),
-                                                comboBox_genre.Text.Trim(),
-                                                textBox_rtScore.Text.Trim(),
-                                                textBox_boe.Text.Trim());
+            if (foundMovie is null)
+            {
+                MessageBox.Show("No movie was found.");
+            }
+            else
+            {
+                string displayText =
+                    "* Deleting Movie: *\n\n" +
+                    $"Movie Title: {foundMovie.MovieTitle}\n" +
+                    $"Year: {foundMovie.Year}\n" +
+                    $"Director: {foundMovie.Director}\n" +
+                    $"Genre: {foundMovie.Genre}\n" +
+                    $"RT Score: {foundMovie.RTScore}\n" +
+                    $"BOE: {foundMovie.BOE}";
 
-            string displayText =
-                "* Delete Button *\n\n" +
-                $"Movie Title: {movieData.MovieTitle}\n" +
-                $"Year: {movieData.Year}\n" +
-                $"Director: {movieData.Director}\n" +
-                $"Genre: {movieData.Genre}\n" +
-                $"RT Score: {movieData.RTScore}\n" +
-                $"BOE: {movieData.BOE}";
+                MessageBox.Show(displayText);
 
-            MessageBox.Show(displayText);
-
-            SqlHandler.deleteRecord(movieData);
+                SqlHandler.deleteRecord(foundMovie);
+            }
         }
     }
 }
